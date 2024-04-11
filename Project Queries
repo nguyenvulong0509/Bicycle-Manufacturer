@@ -1,5 +1,3 @@
---lưu ý chung: chỉnh lại tên CTE thành raw_data hoặc gì đó, mình đặt CTE nó kì lắm, giống như mình đặt tên table là table vậy :D
-
 
 /* Calc Quantity of items, Sales value & Order quantity by each Subcategory in L12M
 Output: Period (Month n Year), Product Name, Order quantity, Total sales (from total line), Number of order
@@ -24,7 +22,7 @@ SELECT *
 FROM raw_data
 ORDER BY period DESC,
         Subcat;
---correct
+
 
 
 /* Calc % YoY growth rate by SubCategory & release top 3 cat with highest grow rate. Can use metric: quantity_item. Round results to 2 decimal
@@ -57,7 +55,7 @@ SELECT Subcat,
 FROM prev_year
 ORDER BY YoY_rate DESC
 LIMIT 3;
---correct
+
 
 
 /* Top 3 TerritoryID with biggest OrderQty of every year
@@ -109,7 +107,6 @@ GROUP BY
         ,c1.UnitPrice
         ,c2.DiscountPct;
 
---mình sẽ luôn tách aggregate function và field*field ra, cho dễ nhìn, dễ kiểm soát output thoi
 select 
     FORMAT_TIMESTAMP("%Y", ModifiedDate), Name
     , sum(disc_cost) as total_cost
@@ -205,7 +202,7 @@ SELECT
       coalesce(ROUND((stock_qty - prev_qty)*100.0/prev_qty,1),0) AS MoM_diff
 FROM data2;
 
---bổ sung thêm hàm coalesce
+
 
 /* Calc Ratio of Stock / Sales in 2011 by product name, by month
 Order results by month desc, ratio desc. Round Ratio to 1 decimal
@@ -276,4 +273,4 @@ GROUP BY EXTRACT(year FROM ModifiedDate)
         ,Status;
 
 
-                                                        --very good---
+                                                        
