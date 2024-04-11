@@ -1,5 +1,7 @@
 # Bicycle-Manufacturer
 ## The AdventureWorks database supports standard online transaction processing scenarios for a fictitious bicyclemanufacturer (Adventure Works Cycles) 
+For more details about the dataset and queries, please see the link: https://console.cloud.google.com/bigquery?sq=376649915038:479561a5722845adb1a9eb1b39b15fbd
+
 Scenarios include Manufacturing, Sales, Purchasing, Product Management, Contact Management, and Human Resources.
 The business questions that needed to solve:
 1. Quantity of items, Sales value & Order quantity by each Subcategory in L12M
